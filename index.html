@@ -1,0 +1,46 @@
+<!doctype html>
+<!-- CANDU 6 Interactive Reactor Lab · Developed by Reza Attarzadeh -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Reza Attarzadeh">
+<meta name="description" content="Interactive learning lab for the CANDU 6 reactor: 380-channel core, fuel-channel thermalhydraulics, heat transport, moderator, reactivity devices, ageing and ROP trip set-points, shutdown systems and accident simulation.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='18' fill='%230e1218' stroke='%234cc2ff' stroke-width='3'/%3E%3Cg fill='%234cc2ff'%3E%3Ccircle cx='20' cy='10' r='3'/%3E%3Ccircle cx='11' cy='17' r='3'/%3E%3Ccircle cx='29' cy='17' r='3'/%3E%3Ccircle cx='20' cy='21' r='3'/%3E%3Ccircle cx='13' cy='28' r='3'/%3E%3Ccircle cx='27' cy='28' r='3'/%3E%3C/g%3E%3C/svg%3E">
+<title>CANDU 6 Interactive Reactor Lab</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <aside id="nav">
+    <div class="brand">
+      <svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"/><g fill="currentColor"><circle cx="20" cy="9" r="2.2"/><circle cx="12" cy="14" r="2.2"/><circle cx="28" cy="14" r="2.2"/><circle cx="9" cy="22" r="2.2"/><circle cx="20" cy="20" r="2.2"/><circle cx="31" cy="22" r="2.2"/><circle cx="13" cy="29" r="2.2"/><circle cx="27" cy="29" r="2.2"/></g></svg>
+      <div><b>CANDU 6</b><span>Interactive Reactor Lab</span></div>
+    </div>
+    <nav id="navlist"></nav>
+    <p class="disclaimer"><span class="dev">Developed by <b>Reza Attarzadeh</b></span>Educational models calibrated to public CANDU 6 design data. Not for design, licensing or operational use.</p>
+  </aside>
+  <main>
+    <header id="status"></header>
+    <div id="views"></div>
+  </main>
+</div>
+<div id="tip"></div>
+<div id="boot">Building the 380-channel core model…</div>
+<script src="js/physics.js"></script>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+<script src="js/views/overview.js"></script>
+<script src="js/views/coremap.js"></script>
+<script src="js/views/channel.js"></script>
+<script src="js/views/pht.js"></script>
+<script src="js/views/moderator.js"></script>
+<script src="js/views/flux.js"></script>
+<script src="js/views/sim.js"></script>
+<script src="js/views/aging.js"></script>
+<script src="js/views/safety.js"></script>
+<script src="js/views/library.js"></script>
+<script>CANDU.app.start();</script>
+</body>
+</html>
